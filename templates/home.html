@@ -1,0 +1,23 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <h1>hello {{name}} </h1>
+ 
+  <a href="https://www.youtube.com/watch?v=YZvRrldjf1Y">E-Commers Using Django</a><br><br>
+  <a href="https://www.youtube.com/watch?v=JIFqqdRxmVo">Django Rest API Simplilearn</a><br><br>
+  <a href="https://www.youtube.com/watch?v=F5mRW0jo-U4">Django Course</a>
+  <center>
+  <div class="text-center">
+  <h2>Addition App</h2>
+  <form  action="add/" method="post">
+     {% csrf_token %}
+    <input type="text" name="num1" placeholder="Enter First Number"><br><br>
+     <input type="text" name="num2" placeholder="Enter Second Number"><br><br>
+      <input type="submit" name="submit" value="Submit" >
+    </center>
+  </form>
+  
+  </div>
+{% endblock content %}
